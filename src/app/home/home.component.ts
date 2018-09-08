@@ -12,7 +12,7 @@ import { UserOpinionsServices } from '../shared/services/user-opinions.service';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
 
@@ -35,17 +35,17 @@ export class HomeComponent implements OnInit {
 
   getLastNews() {
     const aux= (this.news.length);
-    return this.news.slice(aux-3, aux-1).reverse();
+    return this.news.slice(0, aux-1).reverse();
   }
 
   getLastOpinions() {
     const aux= (this.opinions.length);
-    return this.opinions.slice(aux-2, aux).reverse();
+    return this.opinions.slice(0, aux).reverse();
   }
 
   getLastAnalysis() {
     const aux= (this.user_opinions.length);
-    return this.user_opinions.slice(aux-2, aux).reverse();
+    return this.user_opinions.slice(0, aux).reverse();
   }
 
   navigateToArticle(){

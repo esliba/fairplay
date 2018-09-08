@@ -55,3 +55,7 @@ ul.nav.navbar-nav .linkActive a{
 .navbar-nav li {
     border-radius: 10px;
 }
+
+.container{
+    background-color: #ffffff;
+}

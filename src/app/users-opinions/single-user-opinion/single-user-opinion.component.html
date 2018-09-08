@@ -9,6 +9,6 @@
     </div>
   </div>
   <div id="textContainer">
-    <p class="text-muted">{{ analysis.brief_information }}</p>
+    <p class="text-muted">{{ analysis.brief_information | slice:0:100 }}</p>
   </div>
 </div>
