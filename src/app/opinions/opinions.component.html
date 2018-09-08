@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row" id="opinions">
+    <div class="col-md-12">
+      <app-opinion-list-element
+        *ngFor="let an_opinion of getOpinionsByGroupIndex(); let i = index"
+        [opinion]="an_opinion"
+        [index]="i">
+      </app-opinion-list-element>
+  </div>
+</div>
+<div class="row" id="buttonContainer">
+  <div class="col-md-6">
+    <button
+      class="btn btn-success" id="previousButton"
+      [ngClass]="{buttonDisabled: !getPreviousAllowed()}"
+      (click)="getPreviousAllowed() ? onClickPaginationPrevious() : null">&lt;</button>
+    </div>
+    <div class="col-md-6">
+      <button
+        class="btn btn-success"
+        [ngClass]="{buttonDisabled: !getNextAllowed()}"
+        (click)="getNextAllowed() ? onClickPaginationNext() : null">&gt;</button>
+    </div>
+</div>
+</div>

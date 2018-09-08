@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="row" id="homeFixed">
+    <div class="col-md-8">
+      <div id="lastNewContainer">
+        <div id="headlineContainer">
+          <span id="headline">{{ last_new.headline }}</span>
+        </div>
+        <div id="imgContainer">
+          <img [src]="last_new.image_path" class="img-responsive" id="imgContainer">
+          <div id="titleContainer">
+            <span id="articleTitle" (click)="navigateToArticle()">{{ last_new.title }}</span>
+          </div>
+        </div>
+        <div id="textContainer">
+          <p class="text-muted">{{ last_new.brief_information }}</p>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4" id="tableContainer">
+      <ul class="tables">
+        <li>
+          <p [ngClass]="activeTable == 'Fecha' ? 'tabActive':'tab'" (click)="changeTable('Fecha')">Fecha</p>
+        </li>
+        <li>
+          <p [ngClass]="activeTable == 'Posiciones' ? 'tabActive':'tab'" (click)="changeTable('Posiciones')">Posiciones</p>
+        </li>
+        <li>
+          <p [ngClass]="activeTable == 'Descensos' ? 'tabActive':'tab'" (click)="changeTable('Descensos')">Descensos</p>
+        </li>
+        <li>
+          <p [ngClass]="activeTable == 'Goleadores' ? 'tabActive':'tab'" (click)="changeTable('Goleadores')">Goleadores</p>
+        </li>
+      </ul>
+      <div [ngSwitch]="activeTable">
+          <app-matchs-table
+          *ngSwitchCase="'Fecha'">
+          </app-matchs-table>
+          <app-positions-table
+          *ngSwitchCase="'Posiciones'">
+          </app-positions-table>
+          <app-relegations-table
+          *ngSwitchCase="'Descensos'">
+          </app-relegations-table>
+          <app-strikers-table
+          *ngSwitchCase="'Goleadores'">
+          </app-strikers-table>  
+      </div>
+    </div>
+  </div>
+  <div class="row" id="homeScroll">
+    <hr>
+    <div class="col-md-4">
+      <p id="news"> Noticias </p>
+      <app-single-new
+        *ngFor="let a_new of getLastNews(); let i = index"
+        [new]="a_new"
+        [index]="i">
+      </app-single-new>
+    </div>
+    <div class="col-md-4">
+      <p id="opinions"> Opiniones </p>
+      <app-single-opinion
+        *ngFor="let an_opinion of getLastOpinions(); let i = index"
+        [opinion]="an_opinion"
+        [index]="i">
+      </app-single-opinion>
+    </div>
+    <div class="col-md-4">
+      <p id="analysis"> Análisis de usuarios </p>
+      <app-single-user-opinion
+        *ngFor="let an_analysis of getLastAnalysis(); let i = index"
+        [analysis]="an_analysis"
+        [index]="i">
+      </app-single-user-opinion>
+    </div>
+  </div>
+</div>

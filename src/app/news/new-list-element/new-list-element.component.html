@@ -1,0 +1,11 @@
+<div class="media">
+    <div class="media-left">
+      <img [src]="new.image_path" class="media-object">
+    </div>
+    <div class="media-body">
+      <h5 id="newTitle" class="media-heading">{{ new.title }}</h5>
+      <p class="text-muted">{{ new.brief_information }}</p>
+      <p id="newLink" class="text-muted" (click)="navigateToNew()">Leer más...</p>
+    </div>
+    <br>
+</div>

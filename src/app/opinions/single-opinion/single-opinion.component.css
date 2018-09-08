@@ -1,0 +1,46 @@
+img {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+#imgContainer {
+    height: 210px;
+}
+
+#opinionContainer {
+    width: 320px;
+}
+
+#titleContainer {
+    position: relative;
+    text-align: center;
+    top: -45px;
+}
+
+#opinionTitle {
+    background: rgb(0, 0, 0, 0.50);
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+
+#textContainer {
+    padding-top: 10px;
+}
+
+#headlineContainer {
+    position: relative;
+    text-align: left;
+    left: 15px;
+    top: 30px;
+}
+
+#headline {
+    padding: 3px;
+    background: rgba(3, 59, 3, 0.6);
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+}

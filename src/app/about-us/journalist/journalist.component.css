@@ -1,0 +1,27 @@
+.media {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.media-object {
+    max-width: 290px;
+    max-height: 240px;
+}
+
+.media-body {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: relative;
+}
+
+#usTitle {
+    text-align: left;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.80);
+}
+
+img {
+    height: 150px;
+    width: 150px;
+}

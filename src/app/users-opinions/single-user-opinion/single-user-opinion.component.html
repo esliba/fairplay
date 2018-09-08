@@ -1,0 +1,14 @@
+<div id="analysisContainer">
+  <div id="headlineContainer">
+    <span id="headline">{{ analysis.headline }}</span>
+  </div>
+  <div id="imgContainer">
+    <img [src]="analysis.image_path" class="img-responsive">
+    <div id="titleContainer">
+      <span id="analysisTitle" (click)="navigateToAnalysis()">{{ analysis.title }}</span>
+    </div>
+  </div>
+  <div id="textContainer">
+    <p class="text-muted">{{ analysis.brief_information }}</p>
+  </div>
+</div>

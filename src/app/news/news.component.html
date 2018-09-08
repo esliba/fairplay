@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="row" id="news">
+      <div class="col-md-12" id="carouselNews">
+        <div id="homeCarousel" class="carousel slide" data-interval="3000" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li *ngFor="let important_new of getImportantNews(); let i = index; let isFirst = first" 
+                [ngClass]="{'active': isFirst}"
+                data-target="#homeCarousel" [attr.data-slide-to]= "i">
+            </li>
+          </ol>
+            <!--Images-->
+          <div class="carousel-inner">
+            <div *ngFor="let important_new of getImportantNews(); let isFirst = first"
+              [ngClass]="(isFirst) ? 'item active':'item'">
+              <img [src]="important_new.image_path" alt= "{{ important_new.title }}">
+            </div>
+          </div> 
+          <!-- Controls -->
+          <span class="left carousel-control" data-target="#homeCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </span>
+          <span class="right carousel-control" data-target="#homeCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>                    
+          </span>
+        </div>
+      </div>
+    <div class="row" id="buttonContainer">
+      <div class="col-md-6" id="olderNews">
+        <app-new-list-element
+          *ngFor="let a_new of getFirstOldNews(); let i = index"
+          [new]="a_new"
+          [index]="i">
+        </app-new-list-element>
+      </div>
+      <div class="col-md-6" id="olderNews">
+        <app-new-list-element
+          *ngFor="let a_new of getSecondOldNews(); let i = index"
+          [new]="a_new"
+          [index]="i">
+        </app-new-list-element>
+      </div>
+    </div>
+    <div class="row" id="buttonContainer">
+      <div class="col-md-6">
+        <button
+          class="btn btn-success" id="previousButton"
+          [ngClass]="{buttonDisabled: !getPreviousAllowed()}"
+          (click)="getPreviousAllowed() ? onClickPaginationPrevious() : null">&lt;</button>
+        </div>
+        <div class="col-md-6">
+          <button
+            class="btn btn-success"
+            [ngClass]="{buttonDisabled: !getNextAllowed()}"
+            (click)="getNextAllowed() ? onClickPaginationNext() : null">&gt;</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+<!-- <span class="glyphicon glyphicon-info-sign" 
+                (mouseenter)="setStyle()" (mouseleave)="setStyle()">
+                <span class="imageInformation" [ngStyle]="getStyle()">  {{ an_image.description }}  </span>
+              </span>
+            -->

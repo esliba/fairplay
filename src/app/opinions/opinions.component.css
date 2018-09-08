@@ -1,0 +1,40 @@
+#opinions {
+    padding-top: 10px;
+    margin: auto;
+    border-bottom: 2px solid white !important;
+    border-right: 2px solid white !important;
+    border-left: 2px solid white !important;
+}
+
+.btn.btn-success {
+    background-color: rgb(206,238,176) !important;
+    color: black !important;
+}
+
+.btn.btn-success:hover {
+    font-weight: bold;
+}
+
+.buttonDisabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.buttonDisabled:hover {
+    font-weight: normal !important;
+}
+
+#previousButton {
+    float: right !important;
+}
+
+div.col-md-6 {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+#buttonContainer {
+    border-top: 2px solid #51545A;
+    background: rgba(0,0,0,0.80);
+    margin: auto;
+}

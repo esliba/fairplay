@@ -1,0 +1,11 @@
+<div class="media">
+  <div class="media-left">
+    <img [src]="opinion.image_path" class="media-object">
+  </div>
+  <div class="media-body">
+    <h5 id="opinionTitle" class="media-heading">{{ opinion.title }}</h5>
+    <p class="text-muted">{{ opinion.brief_information }}</p>
+    <p id="opinionLink" class="text-muted" (click)="navigateToOpinion()">Leer más...</p>
+  </div>
+  <br>
+</div>

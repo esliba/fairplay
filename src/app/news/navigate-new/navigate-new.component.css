@@ -1,0 +1,25 @@
+.singleNewContainer {
+    border-left: 2px solid white !important;
+    border-right: 2px solid white !important;
+    border-bottom: 2px solid white !important;
+}
+
+#newTitle {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.80);
+}
+
+img {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    max-width: 800px;
+    height: 500px;
+    margin: 0 auto;
+}
+
+p {
+    padding-left: 10px;
+    padding-right: 10px;
+}

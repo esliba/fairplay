@@ -1,0 +1,14 @@
+<div id="newContainer">
+  <div id="headlineContainer">
+    <span id="headline">{{ new.headline }}</span>
+  </div>
+  <div id="imgContainer">
+    <img [src]="new.image_path" class="img-responsive">
+    <div id="titleContainer">
+      <span id="articleTitle" (click)="navigateToNew()">{{ new.title }}</span>
+    </div>
+  </div>
+  <div id="textContainer">
+    <p class="text-muted">{{ new.brief_information }}</p>
+  </div>
+</div>

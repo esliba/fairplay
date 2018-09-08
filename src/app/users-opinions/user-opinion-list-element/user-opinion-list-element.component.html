@@ -1,0 +1,11 @@
+<div class="media">
+  <div class="media-left">
+      <img [src]="analysis.image_path" class="media-object">
+  </div>
+  <div class="media-body">
+    <h5 id="analysisTitle" class="media-heading">{{ analysis.title }}</h5>
+    <p class="text-muted">{{ analysis.brief_information }}</p>
+    <p id="analysisLink" class="text-muted" (click)="navigateToAnalysis()">Leer más...</p>
+  </div>
+  <br>
+</div>

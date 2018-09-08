@@ -1,0 +1,14 @@
+<div id="opinionContainer">
+  <div id="headlineContainer">
+    <span id="headline">{{ opinion.headline }}</span>
+  </div>
+  <div id="imgContainer">
+    <img [src]="opinion.image_path" class="img-responsive">
+    <div id="titleContainer">
+      <span id="opinionTitle" (click)="navigateToOpinion()">{{ opinion.title }}</span>
+    </div>
+  </div>
+  <div id="textContainer">
+    <p class="text-muted">{{ opinion.brief_information }}</p>
+  </div>
+</div>
